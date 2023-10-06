@@ -17,7 +17,7 @@ class ListarActivity : AppCompatActivity() {
     lateinit var binding : ActivityListarBinding
     lateinit var viewModel: ListarViewModel
     lateinit var livrosDao: LivroDao
-    lateinit var db: AppDataBase
+
 
 
     var salvos: List<Livro> = listOf()
