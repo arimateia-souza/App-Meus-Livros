@@ -14,9 +14,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        //Butão Cadastrar
+        //Botão Cadastrar
         binding.buttonCadastrar.setOnClickListener(){
             var intent = Intent(this, CadastrarActivity::class.java)
+            startActivity(intent)
+        }
+        //Botão Listar
+        binding.buttonListar.setOnClickListener(){
+            var intent = Intent(this, ListarActivity::class.java)
             startActivity(intent)
         }
 

@@ -1,7 +1,9 @@
 package eaj.ufrn.meuslivros
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.databinding.DataBindingUtil
 import androidx.room.Room
 import com.google.android.material.snackbar.Snackbar
@@ -34,9 +36,8 @@ class CadastrarActivity : AppCompatActivity() {
 
             db.livroDao().inserir(l)
             Snackbar.make(it, "O livro foi Salvo!", Snackbar.LENGTH_LONG).show()
-
+            Log.i("Inserçao", "Adicionou no banco: $l ")
         }
-
 
         //botão de cancelar
         binding.buttonDoCancelar.setOnClickListener(){
